@@ -1,0 +1,23 @@
+<h1>Perfil de {{user.username}} </h1>
+
+<img class="userEditImage" src="{{user.imageUrl}}" alt="User image profile">
+
+<a class="{{follow}} follow btn btn-outline-success" href="/users/follow/{{user._id}}">Seguir</a>
+<a class="{{unfollow}} btn btn-outline-warning" href="/users/unfollow/{{user._id}}">Dejar de seguir </a>
+
+
+{{!-- LISTA DE Obras --}}
+
+<h2>Obras de {{user.username}} </h2>
+<div class="container">
+    <div class="row" id="worksuser">
+    </div>
+    <div class="row" id="map"></div>
+
+</div>
+
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/javascripts/api-handlers.js"></script>
+<script src="/javascripts/profile.js"></script>
